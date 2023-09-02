@@ -26,6 +26,7 @@ namespace DogsBarberShop
             builder.Services.AddDbContext<DataContext>(options => options.UseSqlServer(configuration.GetConnectionString("Db")));
             builder.Services.AddAuthentication().AddJwtBearer(options =>
             {
+                // validating token at each request in controller with [authorize] data annotaion
                 options.TokenValidationParameters = new TokenValidationParameters
                 {
                     ValidateIssuerSigningKey = true,

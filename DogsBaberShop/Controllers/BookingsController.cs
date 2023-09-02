@@ -18,6 +18,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace DogsBarberShop.Controllers
 {
+    // authorize every reauest with bearer jwt
     [Route("api/[controller]")]
     [ApiController, Authorize]
 

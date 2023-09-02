@@ -65,9 +65,10 @@ namespace DogsBarberShop.Controllers
             return Ok(CreateToken(user));
         }
 
-
+        // creating jwt on login to store in user's local storage and use in every upcoming request
         private string CreateToken(User user)
         {
+            // adding token payload data section
             List<Claim> claims = new List<Claim>(){
                 new Claim("name", user.Username),
                 new Claim("id", user.Id.ToString())
@@ -77,6 +78,7 @@ namespace DogsBarberShop.Controllers
 
             var cred = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
 
+            // setting token validity for 2 hours
             var token = new JwtSecurityToken(
                 claims: claims,
                 expires: DateTime.Now.AddHours(2),
@@ -97,6 +99,7 @@ namespace DogsBarberShop.Controllers
             }
         }
 
+        // creating encrypted password
         private static void CreateHashedPassword(string password, out byte[] passwordSalt, out byte[] passworedHash)
         {
             using (var hmac = new HMACSHA512())
