@@ -1,0 +1,144 @@
+#root {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  direction: rtl;
+}
+
+body{
+  background-color: rgb(151, 193, 229);
+}
+form.new-booking{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap:1em;
+  padding: 1em;
+  border: 1px solid seashell;
+}
+
+form.edit-form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  height: 100%;
+}
+
+form.login > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+form.login > div > input{
+  font-size: 16px;
+}
+
+.filter{
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  height: 40px;
+}
+
+input[type="submit"] {
+  font-size: 16px;
+  margin: auto;
+}
+.list-item-text{
+  text-align: right;
+  margin: 3px;
+  height: 100%;
+}
+
+.list-item{
+  border: 1px solid saddlebrown;
+  width: 400px;
+  border-radius: 5px;
+  margin: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+form.login{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 1em;
+  border: 2px solid;
+}
+
+.header {
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  left: 0;
+  top: 0;
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+  background-color: aliceblue;
+}
+
+.loader-container{
+  left: 0;
+  top: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.modal-container{
+  left: 0;
+  top: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(84, 74, 74, 0.3);
+}
+
+.modal{
+  width: 300px;
+  height: 200px;
+  background-color: aliceblue;
+  border-radius: 5px;
+  z-index: 2222;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px 5px;
+}
+
+.buttons > button{
+  padding: 5px 5px 0 5px;
+  margin: 3px;
+}
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #FFF;
+  border-bottom-color: #FF3D00;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  }
+
+  @keyframes rotation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+  } 
