@@ -10,6 +10,7 @@ lerna-debug.log*
 Frontend\DogsBarberShopFront\node_modules
 Frontend\DogsBarberShopFront\dist
 Frontend\DogsBarberShopFront\dist-ssr
+
 *.local
 
 # Editor directories and files
@@ -22,3 +23,9 @@ Frontend\DogsBarberShopFront\dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+
+DogsBaberShop\bin
+DogsBaberShop\obj
+DataAccessLayer\bin
+DataAccessLayer\obj
